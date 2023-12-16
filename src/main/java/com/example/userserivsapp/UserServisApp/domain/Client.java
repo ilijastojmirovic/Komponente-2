@@ -22,4 +22,11 @@ public class Client {
 
     @Embedded
     private User user;
+
+    public Client(Long id, String uniqeCardNumber, int nubmerOfTrainings, User user) {
+        this.id = id;
+        this.uniqeCardNumber = uniqeCardNumber;
+        this.nubmerOfTrainings = nubmerOfTrainings;
+        this.user = user;
+    }
 }

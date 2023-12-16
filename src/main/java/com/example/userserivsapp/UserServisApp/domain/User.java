@@ -16,8 +16,8 @@ public class User {
     private String firstName;
     private String lastName;
 
-    public User() {
-    }
+    //public User() {
+    //}
 
     public User(String username, String password, String email, String dateOfBirth, String firstName, String lastName) {
         this.username = username;
@@ -27,10 +27,5 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
-    //Podaci koje bi svaki
-    //tip korisnika trebalo da ima su: korisničko ime (username), lozinku
-    //(password), imejl, datum rođenja, ime i prezime.
-
 
 }
