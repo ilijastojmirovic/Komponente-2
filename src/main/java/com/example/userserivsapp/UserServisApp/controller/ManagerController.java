@@ -26,16 +26,9 @@ public class ManagerController {
         this.managerService = managerService;
     }
 
-    @Operation(summary = "Get all users",
-            description = "Get a list of all users",
-            responses = {
-                    @ApiResponse(description = "Successful Operation", content = @Content),
-                    @ApiResponse(responseCode = "400", description = "Bad Request"),
-                    @ApiResponse(responseCode = "401", description = "Unauthorized"),
-                    // Dodajte ostale odgovore po potrebi
-            })
+    @Operation(summary = "Get all users")
     @GetMapping
-    public ResponseEntity<Page<ManagerDto>> getAllUsers(@RequestHeader("Authorization") String authorization,
+    public ResponseEntity<Page<ManagerDto>> getAllUsers(//@RequestHeader("Authorization") String authorization,
                                                         Pageable pageable) {
 
         return new ResponseEntity<>(managerService.findAll(pageable), HttpStatus.OK);

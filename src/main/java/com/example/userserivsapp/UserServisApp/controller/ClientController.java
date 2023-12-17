@@ -25,16 +25,16 @@ public class ClientController {
     }
 
 
-    @Operation(summary = "Get all users",
+    @Operation(summary = "Get all users")/*,
             description = "Get a list of all users",
             responses = {
                     @ApiResponse(description = "Successful Operation", content = @Content),
                     @ApiResponse(responseCode = "400", description = "Bad Request"),
                     @ApiResponse(responseCode = "401", description = "Unauthorized"),
                     // Dodajte ostale odgovore po potrebi
-            })
+            })*/
     @GetMapping
-    public ResponseEntity<Page<ClientDto>> getAllUsers(@RequestHeader("Authorization") String authorization,
+    public ResponseEntity<Page<ClientDto>> getAllUsers(
                                                        Pageable pageable) {
 
         return new ResponseEntity<>(clientService.findAll(pageable), HttpStatus.OK);
