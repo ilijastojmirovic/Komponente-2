@@ -19,4 +19,12 @@ public class Admin {
 
     @Embedded
     private User user;
+
+    public Admin(User user) {
+        this.user = user;
+    }
+
+    public Admin() {
+
+    }
 }

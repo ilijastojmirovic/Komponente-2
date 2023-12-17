@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(indexes = {
-        @Index(columnList = "uniqueCardNumber", unique = true),
+        //@Index(columnList = "unique_card_number", unique = true),
         @Index(columnList = "email", unique = true),
         @Index(columnList = "username", unique = true)
 })
@@ -28,5 +28,15 @@ public class Client {
         this.uniqeCardNumber = uniqeCardNumber;
         this.nubmerOfTrainings = nubmerOfTrainings;
         this.user = user;
+    }
+
+    public Client(String uniqeCardNumber, int nubmerOfTrainings, User user) {
+        this.uniqeCardNumber = uniqeCardNumber;
+        this.nubmerOfTrainings = nubmerOfTrainings;
+        this.user = user;
+    }
+
+    public Client() {
+
     }
 }

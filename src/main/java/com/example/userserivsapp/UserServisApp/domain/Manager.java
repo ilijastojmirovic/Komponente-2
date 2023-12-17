@@ -28,4 +28,8 @@ public class Manager {
         this.startDate = startDate;
         this.user = user;
     }
+
+    public Manager() {
+
+    }
 }
