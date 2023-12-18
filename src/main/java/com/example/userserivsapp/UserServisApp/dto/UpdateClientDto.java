@@ -7,11 +7,10 @@ import org.hibernate.validator.constraints.Length;
 
 @Getter
 @Setter
-public class ManagerCreateDto {
+public class UpdateClientDto {
 
-    private Long id;
-    private String hallName;
-    private String startDate;
+
+    private String uniqeCardNumber;
     private UserDto userDto;
 
 
@@ -19,16 +18,12 @@ public class ManagerCreateDto {
     @Setter
     public static class UserDto {
 
-        @NotBlank
         private String username;
         @Length(min = 5, max = 20)
-        private String password;
-        @NotBlank
+        //private String password;
         private String email;
-        private String dateOfBirth;
-
         private String firstName;
         private String lastName;
-        private boolean permission;
+
     }
 }

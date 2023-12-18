@@ -15,17 +15,19 @@ public class User {
     private String dateOfBirth;
     private String firstName;
     private String lastName;
+    private boolean permission;
 
     //public User() {
     //}
 
-    public User(String username, String password, String email, String dateOfBirth, String firstName, String lastName) {
+    public User(String username, String password, String email, String dateOfBirth, String firstName, String lastName, boolean permission) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.dateOfBirth = dateOfBirth;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.permission = permission;
     }
 
     public User() {

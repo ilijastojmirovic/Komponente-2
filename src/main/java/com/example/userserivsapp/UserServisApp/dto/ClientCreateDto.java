@@ -21,7 +21,7 @@ public class ClientCreateDto {
 
         @NotBlank
         private String username;
-        @Length(min = 8, max = 20)
+        @Length(min = 5, max = 20)
         private String password;
         @NotBlank
         private String email;
@@ -29,5 +29,7 @@ public class ClientCreateDto {
 
         private String firstName;
         private String lastName;
+        private boolean permission;
+
     }
 }

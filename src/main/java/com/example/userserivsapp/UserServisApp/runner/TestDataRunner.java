@@ -28,7 +28,7 @@ public class TestDataRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         //Insert roles
         //Insert admin
-        Admin admin = new Admin(new User("admin","admin1234","admin@raf.rs","","",""));
+        Admin admin = new Admin(new User("admin","admin1234","admin@raf.rs","","","",true));
         adminRepository.save(admin);
     }
 }
