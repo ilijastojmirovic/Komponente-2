@@ -78,7 +78,7 @@ public class ClientServiceImpl implements ClientService {
         //Create token payload
         Claims claims = Jwts.claims();
         claims.put("id", user.getId());
-        claims.put("class", user.getClass().getName());
+        claims.put("class", "Client");
         //Generate token
         return new TokenResponseDto(tokenService.generate(claims));
     }

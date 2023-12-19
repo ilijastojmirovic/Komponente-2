@@ -16,7 +16,7 @@ public class User {
     private String firstName;
     private String lastName;
     private boolean permission;
-
+    //private Role role;
     //public User() {
     //}
 
