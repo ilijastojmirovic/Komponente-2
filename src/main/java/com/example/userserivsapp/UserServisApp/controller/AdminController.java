@@ -46,16 +46,15 @@ public class AdminController {
 
     @Operation(summary = "Get all clients")
     @GetMapping("/clients")
-    @CheckSecurity(classTypes = {"Admin"})
+    //@CheckSecurity(classTypes = {"Admin"})
     public ResponseEntity<Page<ClientDto>> getAllClients(//@RequestHeader("Authorization") String authorization,
                                                        Pageable pageable) {
-
         return new ResponseEntity<>(adminService.findAllClients(pageable), HttpStatus.OK);
     }
 
     @Operation(summary = "Get all clients")
     @GetMapping("/managers")
-    @CheckSecurity(classTypes = {"Admin"})
+    //@CheckSecurity(classTypes = {"Admin"})
     public ResponseEntity<Page<ManagerDto>> getAllManagers(//@RequestHeader("Authorization") String authorization,
                                                           Pageable pageable) {
 
@@ -63,13 +62,13 @@ public class AdminController {
     }
 
     @Operation(summary = "Change client permission")
-    @PutMapping("/changeclient")
+    @PutMapping("/clientpermission")
     public ResponseEntity<ClientDto> updateClientPermission(@RequestBody UpdatePermissionDto updatePermissionDto) {
         return new ResponseEntity<>(adminService.updatePermissionClient(updatePermissionDto), HttpStatus.OK);
     }
 
     @Operation(summary = "Change manager permission")
-    @PutMapping("/changemanager")
+    @PutMapping("/managerpermission")
     public ResponseEntity<ManagerDto> updateManagerPermission(@RequestBody UpdatePermissionDto updatePermissionDto) {
         return new ResponseEntity<>(adminService.updatePermissionManager(updatePermissionDto), HttpStatus.OK);
     }

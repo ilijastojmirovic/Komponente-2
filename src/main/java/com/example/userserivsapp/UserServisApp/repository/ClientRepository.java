@@ -10,6 +10,6 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
     //Optional<Client> findUserByUsernameAndPassword(String username, String password);
     Optional<Client> findByUser_EmailAndUser_Password(String email, String password);
     Optional<Client> findByUser_EmailAndUser_Username(String email, String password);
-    Optional<Client> findByUniqeCardNumber(String uniqueCardNumber);
+    Optional<Client> findByuniqueCardNumber(String uniqueCardNumber);
 
 }

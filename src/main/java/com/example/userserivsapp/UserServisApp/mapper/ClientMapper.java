@@ -10,13 +10,13 @@ public class ClientMapper {
 
     public ClientDto clientToClientDto(Client client){
        return new ClientDto(client.getId(),client.getUser().getUsername(),client.getUser().getEmail(),client.getUser().getFirstName(),
-                client.getUser().getLastName(),client.getUniqeCardNumber());
+                client.getUser().getLastName(),client.getUniqueCardNumber());
     }
 
     public Client clientCreateDtoToClient(ClientCreateDto clientCreateDto){
         User user = new User(clientCreateDto.getUserDto().getUsername(),clientCreateDto.getUserDto().getPassword(),clientCreateDto.getUserDto().getEmail(),
                 clientCreateDto.getUserDto().getDateOfBirth(),clientCreateDto.getUserDto().getFirstName(),clientCreateDto.getUserDto().getLastName(),clientCreateDto.getUserDto().isPermission());
-        return new Client(clientCreateDto.getId(),clientCreateDto.getUniqeCardNumber(),clientCreateDto.getNubmerOfTrainings(),user);
+        return new Client(clientCreateDto.getId(),clientCreateDto.getUniqueCardNumber(),clientCreateDto.getNubmerOfTrainings(),user);
     }
 
     public Client updatePermissionDtoToClient(Client client, UpdatePermissionDto updatePermissionDto){

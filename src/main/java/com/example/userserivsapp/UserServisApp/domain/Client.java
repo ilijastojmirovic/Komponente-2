@@ -17,21 +17,21 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String uniqeCardNumber;
+    private String uniqueCardNumber;
     private int nubmerOfTrainings;
 
     @Embedded
     private User user;
 
-    public Client(Long id, String uniqeCardNumber, int nubmerOfTrainings, User user) {
+    public Client(Long id, String uniqueCardNumber, int nubmerOfTrainings, User user) {
         this.id = id;
-        this.uniqeCardNumber = uniqeCardNumber;
+        this.uniqueCardNumber = uniqueCardNumber;
         this.nubmerOfTrainings = nubmerOfTrainings;
         this.user = user;
     }
 
-    public Client(String uniqeCardNumber, int nubmerOfTrainings, User user) {
-        this.uniqeCardNumber = uniqeCardNumber;
+    public Client(String uniqueCardNumber, int nubmerOfTrainings, User user) {
+        this.uniqueCardNumber = uniqueCardNumber;
         this.nubmerOfTrainings = nubmerOfTrainings;
         this.user = user;
     }

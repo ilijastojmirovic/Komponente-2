@@ -42,7 +42,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public ClientDto update(UpdateClientDto updateClientDto) {
-        Client client = clientRepository.findByUniqeCardNumber(updateClientDto.getUniqeCardNumber()).get();
+        Client client = clientRepository.findByuniqueCardNumber(updateClientDto.getUniqueCardNumber()).get();
         if(client == null){
             return null;
         }
@@ -57,6 +57,7 @@ public class ClientServiceImpl implements ClientService {
         if(client == null){
             return null;
         }
+        System.out.println(client);
         client =  clientMapper.updatePassword(client,updatePasswordDto);
         client = clientRepository.save(client);
         return clientMapper.clientToClientDto(client);
